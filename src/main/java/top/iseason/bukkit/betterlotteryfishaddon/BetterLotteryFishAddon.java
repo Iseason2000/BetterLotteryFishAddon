@@ -17,6 +17,7 @@ public final class BetterLotteryFishAddon extends JavaPlugin implements CommandE
 
     private FileConfiguration blConfig = Config.load("BetterLottery");
     public static String messagePattern = null;
+    public static String failurePattern = null;
     private static BetterLotteryFishAddon plugin;
 
     @Override
@@ -27,6 +28,7 @@ public final class BetterLotteryFishAddon extends JavaPlugin implements CommandE
         if (!new File(getInstance().getDataFolder(), "config.yml").exists()) saveDefaultConfig();
         else reloadConfig();
         messagePattern = getConfig().getString("Message");
+        failurePattern = getConfig().getString("Failure");
         setBlConfig(Config.load("BetterLottery"));
     }
 
@@ -59,6 +61,7 @@ public final class BetterLotteryFishAddon extends JavaPlugin implements CommandE
             }
         }.runTaskAsynchronously(this);
         messagePattern = getConfig().getString("Message");
+        failurePattern = getConfig().getString("Failure");
         setBlConfig(Config.load("BetterLottery"));
         sender.sendMessage(ChatColor.GREEN + "配置已重载!");
         return true;

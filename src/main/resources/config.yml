@@ -1,1 +1,2 @@
 Message: "&a恭喜玩家: ${player} 钓到了 ${fish} X ${count}"
+Failure: "&c鱼跑了！"

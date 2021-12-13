@@ -94,6 +94,12 @@ public class PlayerListener implements Listener {
                 }
             }
         }
+        if (config != null && state == PlayerFishEvent.State.FAILED_ATTEMPT) {
+            String failurePattern = BetterLotteryFishAddon.failurePattern;
+            if (failurePattern != null) {
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', failurePattern));
+            }
+        }
         fishingMap.remove(player.getUniqueId());
     }
 
