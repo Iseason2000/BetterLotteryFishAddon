@@ -1,0 +1,11 @@
+name: BetterLotteryFishAddon
+version: '${version}'
+main: top.iseason.bukkit.betterlotteryfishaddon.BetterLotteryFishAddon
+api-version: 1.15
+prefix: BLFA
+depend: [ BetterLottery2 ]
+authors: [ Iseason ]
+website: www.iseason.top
+commands:
+  betterlotteryfishaddon:
+    aliases: [ blfa ]
