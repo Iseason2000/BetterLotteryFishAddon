@@ -86,9 +86,10 @@ public class PlayerListener implements Listener {
                                     itemStack.getItemMeta().getDisplayName() :
                                     itemStack.getType().toString())
                             .replace("${count}", String.valueOf(itemStack.getAmount()));
-                    BetterLotteryFishAddon.getInstance().getServer().getOnlinePlayers().forEach(p -> {
-                        p.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
-                    });
+                    BetterLotteryFishAddon.getInstance()
+                            .getServer()
+                            .getOnlinePlayers()
+                            .forEach(p -> p.sendMessage(ChatColor.translateAlternateColorCodes('&', message)));
 
                 }
             }
